@@ -3,13 +3,15 @@ on:
   # Schedule updates (each hour)
   schedule: [{cron: "0 * * * *"}]
   # Lines below let you run workflow manually and on each commit (optional)
-  workflow_dispatch:
+  workflow_dispatch:METRICS_SECRET
   push: {branches: ["main"]}
 
 jobs:
 
   achievements:
     runs-on: ubuntu-latest
+    environment: 
+      name: production
     steps:
       - uses: lowlighter/metrics@latest
         with:
@@ -26,6 +28,8 @@ jobs:
 
   github-metrics:
     runs-on: ubuntu-latest
+    environment: 
+      name: production
     steps:
       - uses: lowlighter/metrics@latest
         with:
@@ -53,6 +57,8 @@ jobs:
 
   acti_comm:
     runs-on: ubuntu-latest
+    environment: 
+      name: production
     steps:
       - uses: lowlighter/metrics@latest
         with:
@@ -70,6 +76,8 @@ jobs:
 
   iso_calender:
     runs-on: ubuntu-latest
+    environment: 
+      name: production
     steps:
       - uses: lowlighter/metrics@latest
         with:
@@ -80,7 +88,7 @@ jobs:
           committer_token: ${{ secrets.GITHUB_TOKEN }}
 
           # Options
-          user: olopost
+          user: jessfraz
           template: classic
           base: ""
           config_timezone: ${{ secrets.USER_TIMEZONE }}
@@ -89,6 +97,8 @@ jobs:
 
   habits:
     runs-on: ubuntu-latest
+    environment: 
+      name: production
     steps:
       - uses: lowlighter/metrics@latest
         with:
@@ -96,7 +106,7 @@ jobs:
           token: ${{ secrets.METRICS_SECRET }}
           committer_token: ${{ secrets.GITHUB_TOKEN }}
           config_timezone: ${{ secrets.USER_TIMEZONE }} # Set timezone
-          user: olopost
+          user: jessfraz
           base: ""
           template: classic
           plugin_habits: yes
@@ -107,6 +117,8 @@ jobs:
 
   issue_pr_lang:
     runs-on: ubuntu-latest
+    environment: 
+      name: production
     steps:
       - uses: lowlighter/metrics@latest
         with:
@@ -117,7 +129,7 @@ jobs:
           committer_token: ${{ secrets.GITHUB_TOKEN }}
 
           # Options
-          user: olopost
+          user: jessfraz
           template: classic
           base: ""
           config_timezone: ${{ secrets.USER_TIMEZONE }}
@@ -127,6 +139,8 @@ jobs:
 
   repositories:
     runs-on: ubuntu-latest
+    environment: 
+      name: production
     steps:
       - uses: lowlighter/metrics@latest
         with:
@@ -137,7 +151,7 @@ jobs:
           committer_token: ${{ secrets.GITHUB_TOKEN }}
 
           # Options
-          user: olopost
+          user: jessfraz
           template: classic
           base: repositories
           config_timezone: ${{ secrets.USER_TIMEZONE }}
