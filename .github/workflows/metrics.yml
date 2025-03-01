@@ -90,7 +90,7 @@ jobs:
           committer_token: ${{ secrets.GITHUB_TOKEN }}
 
           # Options
-          user: jessfraz
+          user: olopost
           template: classic
           base: ""
           config_timezone: ${{ secrets.USER_TIMEZONE }}
@@ -108,7 +108,7 @@ jobs:
           token: ${{ secrets.METRICS_SECRET }}
           committer_token: ${{ secrets.GITHUB_TOKEN }}
           config_timezone: ${{ secrets.USER_TIMEZONE }} # Set timezone
-          user: jessfraz
+          user: olopost
           base: ""
           template: classic
           plugin_habits: yes
@@ -131,7 +131,7 @@ jobs:
           committer_token: ${{ secrets.GITHUB_TOKEN }}
 
           # Options
-          user: jessfraz
+          user: olopost
           template: classic
           base: ""
           config_timezone: ${{ secrets.USER_TIMEZONE }}
@@ -153,7 +153,7 @@ jobs:
           committer_token: ${{ secrets.GITHUB_TOKEN }}
 
           # Options
-          user: jessfraz
+          user: olopost
           template: classic
           base: repositories
           config_timezone: ${{ secrets.USER_TIMEZONE }}
